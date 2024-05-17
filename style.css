@@ -1,0 +1,119 @@
+:root {
+    /* primary colors */
+    --green: hsl(75, 94%, 57%);
+    /* neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+    /* font size */
+    --size: 14px;
+}
+
+/* font-family */
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    /* 400 600 700 */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-black);
+    font-size: var(--size);
+    overflow: hidden;
+}
+
+.main {
+    width: 420px;
+    padding: 2em 2.2em;
+    border-radius: 15px;
+    background-color: var(--dark-grey);
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.containera-text {
+    text-align: center;
+}
+
+.containera-text .title {
+    font-size: 25px;
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.containera-text .country {
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.containera-text .skill {
+    color: var(--white);
+    opacity: 0.8;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 18px 0px;
+    background: var(--grey);
+    color: var(--white);
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-social:hover {
+    background-color: var(--green);
+    color: var(--off-black);
+    font-weight: 700;
+}
+
+
+@media screen and (width < 455px) {
+    .main {
+        width: 90%;
+    }
+
+    .main .img-container img {
+        max-width: 100px;
+        margin-bottom: 25px;
+    }
+
+    .skill {
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 28px;
+    }
+}
